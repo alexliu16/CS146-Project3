@@ -138,7 +138,9 @@ public class MazeJUnit {
 		}
 		
 		maze.setMaze(nonRandomNodes);
+		
 		System.out.println("Non-Random Maze: \n" + maze.toString());
+		
 		String solution = "+  +--+--+--+"
 				+ "\n|##|        |"
 				+ "\n+  +--+  +  +"
@@ -148,6 +150,8 @@ public class MazeJUnit {
 				+ "\n+  +--+  +  +"
 				+ "\n|      ## ##|"
 				+ "\n+--+--+--+  +\n";
+		
+		System.out.println("Solution: \n" + solution);
 		
 		maze.dfs();
 		System.out.println("DFS Solved: \n" + maze.printDFSShortestPath());
