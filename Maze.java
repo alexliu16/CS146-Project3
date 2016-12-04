@@ -127,10 +127,10 @@ public class Maze {
 						bfsNodes.add(v);
 					queue.add(v);
 				}
-			bfsNodes.add(maze[size-1][size-1]);
+			
 			node.color = Color.BLACK;
 		}
-		
+		bfsNodes.add(maze[size-1][size-1]);
 				
 	}
 	
@@ -229,10 +229,13 @@ public class Maze {
 	 * @return Shortest path of maze solution using BFS
 	 */
 	public String printBFSShortestPath(){
+		bfsNodes = new ArrayList<MazeNode>();
+		MazeNode node = maze[size-1][size-1];
+		while(node != null){
+			bfsNodes.add(node);
+			node = node.predecessor;
+		}
 		printBFSShortest = true;
-		for(int x = bfsNodes.size() - 2; x > -1; x--)
-			if(bfsNodes.get(x).finishingTime < bfsNodes.get(x+1).finishingTime)
-				bfsNodes.remove(x);
 		String s = this.toString();
 		printBFSShortest = false;
 		return s;
