@@ -80,7 +80,7 @@ public class MazeJUnit {
 		
 	}
 	@Test
-	public void checkDFS(){
+	public void nonRandomMazeCheck(){
 		Maze maze = new Maze(4);
 		MazeNode[][] nonRandomNodes = new MazeNode[4][4];
 		int size = 4;
