@@ -10,7 +10,7 @@ enum Color{
  * Represents a Maze in a graph format
  */
 public class Maze {
-	
+	//test
 	private Random random;
 	private MazeNode[][] maze;
 	private int size;
